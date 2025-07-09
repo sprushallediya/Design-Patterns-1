@@ -11,7 +11,7 @@ public class SortedList<E extends Comparable<? super E>> {
         internalList.add(index, e);
     }
 
-    // ✅ Fix: Insert new element before elements >= e
+    //Fix: Insert new element before elements >= e
     private int binarySearchInsertIndex(List<E> list, E e) {
         int left = 0, right = list.size();
         while (left < right) {
@@ -25,7 +25,7 @@ public class SortedList<E extends Comparable<? super E>> {
         return left;
     }
 
-    // ✅ Needed for Tester.java test cases
+    //Needed for Tester.java test cases
     public int binarySearchHigh(List<E> list, E e) {
         return binarySearchInsertIndex(list, e);
     }
